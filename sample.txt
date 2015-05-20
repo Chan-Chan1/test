@@ -1,1 +1,1 @@
-some data
+Installing a gem allows that gem’s code to run in the context of your application. Clearly this has security implications: installing a malicious gem on a server could ultimately result in that server being completely penetrated by the gem’s author. Because of this, the security of gem code is a topic of active discussion within the Ruby community.
