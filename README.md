@@ -82,11 +82,14 @@ YML files are used as test data files for faster data access and these files are
 * based on the profile tags given in `cucumber.yml`, the free profiles are auto-assigned to the currently running execution
 		
 * the profiles are configured in such a way that there can be `n` nodes and each node can have `m` profiles and hence the profile sample space is `n x m`
+
 ###	2. Parallel execution	
 * the parallel execution parameters are given in `config.yml` based on which the merging of custom html report files will be done
 		
 * the profiles for each parallel execution is taken from `config.yml` dynamically
+
 ## Custom Execution report
+
 for each execution an unique test report directory will be created with the name `test_report_<timestamp>` under which by default the following exists
 		
 * `app_env.log` –> holds the log for execution environment and duration details
@@ -100,7 +103,9 @@ for each execution an unique test report directory will be created with the name
 * `custom_report` –> the directory holds merged custom html report files
 	
 * `report_home.html` –> holds the summary report of the execution
+
 ## Performance Report
+
 * the performance report component extracts the build details from cucumber generated json report files and stores in into `Syabse` database
 		
 * the complete execution data for each build will be stored in the DB, which can be interpreted and populated as a performance report
@@ -110,3 +115,4 @@ for each execution an unique test report directory will be created with the name
 * this component is also available as a standalone application bundled with the `friendly-cukes` gem, type `build-extractor` and follow the commands
 		
 * this will work only if `Syabse` database is configured in TAF and tables are created with TAF defined relationships
+	
