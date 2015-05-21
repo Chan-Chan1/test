@@ -75,6 +75,7 @@ YML files are used as test data files for faster data access and these files are
 	the global test data files should be placed under test_data directory under the root feature (`desktop` or `mobile`) directory and if no local test data file is present, then it takes the global data file as default
 
 ## Dynamic profile and Parallel execution
+
 ###	1. Dynamic profiles
 * the profile allocation for each execution ( on single or multiple machines) is done dynamically during the execution
 		
@@ -85,7 +86,7 @@ YML files are used as test data files for faster data access and these files are
 * the parallel execution parameters are given in `config.yml` based on which the merging of custom html report files will be done
 		
 * the profiles for each parallel execution is taken from `config.yml` dynamically
-###	3. Custom Execution report
+## Custom Execution report
 for each execution an unique test report directory will be created with the name `test_report_<timestamp>` under which by default the following exists
 		
 * `app_env.log` –> holds the log for execution environment and duration details
@@ -99,7 +100,7 @@ for each execution an unique test report directory will be created with the name
 * `custom_report` –> the directory holds merged custom html report files
 	
 * `report_home.html` –> holds the summary report of the execution
-###	4. Performance Report
+## Performance Report
 * the performance report component extracts the build details from cucumber generated json report files and stores in into `Syabse` database
 		
 * the complete execution data for each build will be stored in the DB, which can be interpreted and populated as a performance report
