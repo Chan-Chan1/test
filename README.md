@@ -76,37 +76,36 @@ YML files are used as test data files for faster data access and these files are
 
 ## Dynamic profile and Parallel execution
 ###	1. Dynamic profiles
-	* the profile allocation for each execution ( on single or multiple machines) is done dynamically during the execution
+* the profile allocation for each execution ( on single or multiple machines) is done dynamically during the execution
 		
-	* based on the profile tags given in `cucumber.yml`, the free profiles are auto-assigned to the currently running execution
+* based on the profile tags given in `cucumber.yml`, the free profiles are auto-assigned to the currently running execution
 		
-	* the profiles are configured in such a way that there can be `n` nodes and each node can have `m` profiles and hence the profile sample space is `n x m`
+* the profiles are configured in such a way that there can be `n` nodes and each node can have `m` profiles and hence the profile sample space is `n x m`
 ###	2. Parallel execution	
-	* the parallel execution parameters are given in `config.yml` based on which the merging of custom html report files will be done
+* the parallel execution parameters are given in `config.yml` based on which the merging of custom html report files will be done
 		
-	* the profiles for each parallel execution is taken from `config.yml` dynamically
+* the profiles for each parallel execution is taken from `config.yml` dynamically
 ###	3. Custom Execution report
-	for each execution an unique test report directory will be created with the name `test_report_<timestamp>` under which by default the following exists
+for each execution an unique test report directory will be created with the name `test_report_<timestamp>` under which by default the following exists
 		
-	* `app_env.log` –> holds the log for execution environment and duration details
+* `app_env.log` –> holds the log for execution environment and duration details
 		
-	* `feature based custom log file` –> holds the log based on the currently running feature – there can `n` number of feature log files
+* `feature based custom log file` –> holds the log based on the currently running feature – there can `n` number of feature log files
 		
-	* `report_<timestamp>.html` –> cucumber generated html report file that holds the log for features, scenarios and steps
+* `report_<timestamp>.html` –> cucumber generated html report file that holds the log for features, scenarios and steps
 		
-	* `report_<timestamp>.json` –> cucumber generated json report file that holds the log for features, scenarios and steps and the step level durations in nano seconds
+* `report_<timestamp>.json` –> cucumber generated json report file that holds the log for features, scenarios and steps and the step level durations in nano seconds
 		
-	* `custom_report` –> the directory holds merged custom html report files
-		
-	* `report_home.html` –> holds the summary report of the execution
+* `custom_report` –> the directory holds merged custom html report files
+	
+* `report_home.html` –> holds the summary report of the execution
 ###	4. Performance Report
-	* the performance report component extracts the build details from cucumber generated json report files and stores in into `Syabse` database
+* the performance report component extracts the build details from cucumber generated json report files and stores in into `Syabse` database
 		
-	* the complete execution data for each build will be stored in the DB, which can be interpreted and populated as a performance report
+* the complete execution data for each build will be stored in the DB, which can be interpreted and populated as a performance report
 		
-	* the performance report can included or excluded based on the property value of performance_report in `config.yml`
+* the performance report can included or excluded based on the property value of performance_report in `config.yml`
 		
-	* this component is also available as a standalone application bundled with the `friendly-cukes` gem
-		type `build-extractor` and follow the commands
+* this component is also available as a standalone application bundled with the `friendly-cukes` gem, type `build-extractor` and follow the commands
 		
-	* this will work only if `Syabse` database is configured in TAF and tables are created with TAF defined relationships
+* this will work only if `Syabse` database is configured in TAF and tables are created with TAF defined relationships
