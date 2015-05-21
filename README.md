@@ -15,8 +15,6 @@ The gem requires [Ruby (2.0.0)](https://www.ruby-lang.org/en/downloads/), [Chrom
 1. Install friendly-cukes gem
 
 		gem install friendly-cukes
-		
-(Type friendly-cukes and go through the abstract gem information)
 
 2. Install generic cucumber framework 
 
