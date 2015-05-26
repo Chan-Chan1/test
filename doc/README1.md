@@ -199,11 +199,11 @@ for each execution an unique test report directory will be created with the name
 
 – holds the log based on the currently running feature – there can n number of feature log files
 
-#### report_<timestamp>.html 
+#### report_timestamp.html 
 
 – cucumber generated html report file that holds the log for features, scenarios and steps
 
-#### report_<timestamp>.json 
+#### report_timestamp.json 
 
 – cucumber generated json report file that holds the log for features, scenarios and steps and the step level durations in nano seconds
 
