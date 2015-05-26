@@ -27,9 +27,12 @@ Type `smart-hl7` command for its command line utilities.
     $ smart-hl7 --send --file '<HL7 message or file path>' --host '<host name>' --port '<port number>'
 
 where
---file -> HL7 message file path or the message string itself
---host -> the host name or IP address
---port -> the port on which HL7 is configured
+
+--file - HL7 message file path or the message string itself
+
+--host - the host name or IP address
+
+--port - the port on which HL7 is configured
 
 ##### Example :
 
